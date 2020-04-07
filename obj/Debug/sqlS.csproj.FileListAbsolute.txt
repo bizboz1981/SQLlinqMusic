@@ -1,0 +1,10 @@
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.csprojAssemblyReference.cache
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.Properties.Resources.resources
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.csproj.GenerateResource.cache
+C:\Users\w.saunders\source\repos\sqlS\bin\Debug\sqlS.exe.config
+C:\Users\w.saunders\source\repos\sqlS\bin\Debug\sqlS.exe
+C:\Users\w.saunders\source\repos\sqlS\bin\Debug\sqlS.pdb
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.exe
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.pdb
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.frmAlbum.resources
+C:\Users\w.saunders\source\repos\sqlS\obj\Debug\sqlS.SearchForm.resources
