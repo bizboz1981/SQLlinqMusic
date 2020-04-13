@@ -19,7 +19,7 @@ namespace sqlS
             InitializeComponent();
         }
         SqlConnection cnn;
-        string connectionString;
+        public string connectionString = @"Data Source = ISS-6H038555H\BILLSQLSERVER; Initial Catalog = Bill_Music; Integrated Security = True;";
         SqlCommand command;
         string sql = "";
         string Output = "";
@@ -89,7 +89,7 @@ namespace sqlS
 
         private void frmAlbum_Load(object sender, EventArgs e)
         {
-            connectionString = (@"Data Source = ISS-6H038555H\BILLSQLSERVER; Initial Catalog = Bill_Music; Integrated Security = True;");
+            //connectionString = (@"Data Source = ISS-6H038555H\BILLSQLSERVER; Initial Catalog = Bill_Music; Integrated Security = True;");
             cnn = new SqlConnection(connectionString);
             cnn.Open();
             MessageBox.Show("You have successfully connected to the Bill Music Database!");
@@ -156,26 +156,28 @@ namespace sqlS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            cnn.Open();
-            SqlDataReader datareader;
-            sql = $"SELECT Albumid, AlbumTitle, Artist, Price FROM Album WHERE Artist = '{txtArtist.Text}' OR AlbumID = '{txtAlbumID.Text}' OR AlbumTitle = '{txtAlbumTitle.Text}'";
-            command = new SqlCommand(sql, cnn);
-            datareader = command.ExecuteReader();
-            while (datareader.Read())
-            {
-                Output = Output + datareader.GetValue(0) + " - " + datareader.GetValue(1) + " - " + datareader.GetValue(2) + " - " + datareader.GetValue(3) + "\n";
-            }
-
-            MessageBox.Show(Output);
-            datareader.Close();
-            command.Dispose();
-            cnn.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             var srchFrm = new SearchForm();
             srchFrm.Show();
+            //cnn.Open();
+            //SqlDataReader datareader;
+            //sql = $"SELECT Albumid, AlbumTitle, Artist, Price FROM Album WHERE Artist = '{txtArtist.Text}' OR AlbumID = '{txtAlbumID.Text}' OR AlbumTitle = '{txtAlbumTitle.Text}'";
+            //command = new SqlCommand(sql, cnn);
+            //datareader = command.ExecuteReader();
+            //while (datareader.Read())
+            //{
+            //    Output = Output + datareader.GetValue(0) + " - " + datareader.GetValue(1) + " - " + datareader.GetValue(2) + " - " + datareader.GetValue(3) + "\n";
+            //}
+
+            //MessageBox.Show(Output);
+            //datareader.Close();
+            //command.Dispose();
+            //cnn.Close();
+        }
+
+        private void btnSQL_Click(object sender, EventArgs e)
+        {
+            var frmTest = new frmTest();
+            frmTest.Show();
         }
     }
 }
